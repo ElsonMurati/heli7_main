@@ -7,10 +7,12 @@ app = Flask(__name__)
 def view_home():
     return render_template("index.html")
 
-### added route for booking
+
+# added route for booking
 booked_trips = []
 
-@app.route("/booking", methods=["GET", "POST"])
+
+@app.route("/book", methods=["GET", "POST"])
 def book_trip():
     if request.method == "POST":
         name = request.form.get("name")
@@ -28,7 +30,7 @@ def book_trip():
         return "Trip booked successfully!"
 
     return render_template("book.html")
-###
+
 
 if __name__ == "__main__":
     app.run(port=5002)
