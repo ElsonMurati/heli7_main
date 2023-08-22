@@ -10,7 +10,7 @@
      
 <div class="destination-photos">
     <div class="destination-photo">
-        <!-- <img src="static/carousel.jpg" alt="Paris"> -->
+
         <a> <img src="{{url_for('static', filename='images/LondonCity.avif')}}" alt="London city" /></a>
         <p>Experience London City!</p>
         <p>Enjoy riveting aerial views of Central London on our most popular tour! The London sightseeing 
@@ -45,7 +45,7 @@
 </div>
 
 
-    <form method="POST" action="/">
+    <form method="POST" action="/book">
         
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
@@ -65,23 +65,10 @@
         <label for="departure_date">Departure Date:</label>
         <input type="date" id="departure_date" name="departure_date" required><br><br>
         
-
-        <form action="submit_booking.php" method="POST">
             
             <input type="hidden" id="thankYouPage" name="thankYouPage" value="thank_you.html">
             <input type="submit" value="Submit Booking">
-        </form>
 
-<script>
-    document.querySelector("form").addEventListener("submit", function(event) {
-        event.preventDefault(); 
-        
-        const thankYouPage = document.getElementById("thankYouPage").value;
-        window.location.href = thankYouPage;
-    });
-</script>
-
-    </form>
 </body>
 </html>
 
