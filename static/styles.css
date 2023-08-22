@@ -1,0 +1,125 @@
+Reset some default styles for consistency across browsers
+h1, h2, ul, li {
+    margin: 5px;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; 
+}
+h1 {
+    font-size: 16px;
+}
+body, p {
+    margin: 5px;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 87vh;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.text-overlay {
+    position: relative;
+    padding: 20%;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;   
+}
+
+.our-experiences {
+    padding: 2.5%;
+}
+
+.experience-img {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    size: 75%;
+}
+
+.popular-section {
+    background-color: #f7f7f7;
+    padding-top: 0.5%;
+    padding-bottom: 0%;
+    text-align: center;
+}
+
+.popular-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.popular-item {
+    max-width: 250px;
+    text-align: center;
+}
+
+.popular-item img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.3s ease;]]
+}
+
+.popular-item:hover {
+    transform: scale(1.05); /* Scale the image to 120% on hover */
+    cursor: pointer;
+}
+
+.popular-item h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.popular-item p {
+    font-size: 0.9rem;
+}
+
+  
+.footer {
+    text-align: center;
+}
+
+/* logo  */
+/* .logo {
+    position: absolute;
+    display: block;
+    max-width: 200px; /* Adjust the width as needed */
+    /* height: auto;
+    margin: 10px 10px; /* Adjust margin to give space from top and left */
+    /* z-index: 1; */ 
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .top-middle-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    @media (max-width: 768px) {
+        .text-overlay {
+            font-size: 1.8rem; /* Adjust font size for smaller screens */
+        }
+    }
+    
+    /* Media query for even smaller screens */
+    @media (max-width: 576px) {
+        .text-overlay {
+            font-size: 1.5rem; /* Adjust font size for even smaller screens */
+        }
+    } 

@@ -4,17 +4,14 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-
 @app.route('/index', methods=['GET'])
 def view_home():
     return render_template("index.html")
 
 # Connection to SQL
-
-
 def connection():
     server = 'localhost'
-    db = 'heli7'
+    db = 'heli7_project'
     uid = 'sky'
     pwd = 'P@$$word'
     conn = pymysql.Connect(host=server, user=uid, password=pwd, database=db)
@@ -22,7 +19,6 @@ def connection():
     return conn
 
 # To book trips
-
 
 @app.route('/book', methods=["GET", "POST"])
 def book_trip():
@@ -45,6 +41,9 @@ def book_trip():
         return render_template("thank_you.html")
 
     return render_template("book.html")
+
+
+
 
 
 if __name__ == "__main__":
