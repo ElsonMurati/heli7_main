@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heli7 Home Page</title>
+</head>
+
+<body>
+    <header>
+        <h1>Heli7 - to Heli and back</h1>
+        <a> <img src="static/images/logo-black.png" alt="Heli7 logo" /></a>
+        <!-- WHY ISNT THE ROUTE PATH FOUND -->
+    </header>
+    <nav>
+     <a href="index.html">Home</a>
+        <a href="about_us.html">About Us</a>
+        <a href="our_fleet.html">Our Fleet</a>
+        <a href="book.html">Book</a>
+        <a href="sign_up.html">Sign Up</a>
+        <a href="contact_us.html">Contact Us</a>
+
+        {% if MSG == "" %}
+        <a href="/login">Log In</a>
+        {% endif %}
+
+        {% if MSG %}
+        <a href="/logout">{{ MSG }} Logout</a>
+        {% endif %}
+    </nav>
+    <section>
+        <h2>Our Experiences</h2>
+        <p>
+            As a premier helicopter tour company nestled in the heart of London, we offer a truly captivating and
+            exhilarating
+            experience that showcases the iconic city from an entirely new perspective. Our meticulously crafted
+            helicopter tours
+            provide passengers with a breathtaking bird's-eye view of London's most famous landmarks, including the
+            majestic Tower
+            Bridge, the historic Buckingham Palace, and the sprawling beauty of Hyde Park. With a fleet of
+            state-of-the-art
+            helicopters and a team of seasoned pilots, we ensure not only a safe and comfortable journey but also an
+            unforgettable
+            adventure filled with awe-inspiring sights and unique insights into the rich history and vibrant culture of
+            this
+            remarkable city. Whether it's a romantic escapade, a family outing, or a corporate event, our helicopter
+            tours promise
+            an unmatched and awe-inspiring experience that will leave you with memories to cherish for a lifetime.
+        </p>
+    </section>
+    <section>
+        <h2>Check out our reviews</h2>
+        <p>
+            ⭐⭐⭐⭐⭐
+            "I can't believe how incredible the experience was with this helicopter tour company in London! From the
+            moment we
+            stepped onto the helipad, we were greeted by a friendly and professional team who made us feel at ease. The
+            helicopter
+            ride itself was nothing short of spectacular – soaring above the city's iconic landmarks left us speechless.
+            The pilot's
+            expertise and informative commentary added a layer of depth to the tour, making it both thrilling and
+            educational. The
+            panoramic views of London's skyline, including the dazzling lights of the Thames at sunset, were simply
+            breathtaking.
+            The tour was well-paced, allowing us to capture stunning photos and create unforgettable memories. This was
+            truly a
+            once-in-a-lifetime experience that I would recommend to anyone looking for a unique and awe-inspiring way to
+            see London.
+            Thank you to the entire team for making our day so special!" - Sarah M.
+            <!-- perhaps create a carousel of reviews -->
+        </p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; Heli7 - </p>
+        <div class="social-media">
+            <!-- Add your social media badges here -->
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="faq.html">Frequently Asked Questions</a>
+                <a href="about_us.html">About Us</a>
+
+                <a href="contact_us.html">Contact Us</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
