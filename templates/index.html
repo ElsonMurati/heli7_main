@@ -5,76 +5,192 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Heli7 Home Page</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>Heli7 - to Heli and back</h1>
-        <a> <img src="{{url_for('static', filename='images/logo-color.png')}}" alt="Heli7 logo" /></a>
-        <!-- WHY ISNT THE ROUTE PATH FOUND -->
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about_us.html">About Us</a>
-        <a href="our_fleet.html">Our Fleet</a>
-        <a href="book.html">Book</a>
-        <a href="sign_up.html">Sign Up</a>
-        <a href="contact_us.html">Contact Us</a>
-    </nav>
-    <section>
-        <h2>Our Experiences</h2>
-        <p>
-            As a premier helicopter tour company nestled in the heart of London, we offer a truly captivating and
-            exhilarating
-            experience that showcases the iconic city from an entirely new perspective. Our meticulously crafted
-            helicopter tours
-            provide passengers with a breathtaking bird's-eye view of London's most famous landmarks, including the
-            majestic Tower
-            Bridge, the historic Buckingham Palace, and the sprawling beauty of Hyde Park. With a fleet of
-            state-of-the-art
-            helicopters and a team of seasoned pilots, we ensure not only a safe and comfortable journey but also an
-            unforgettable
-            adventure filled with awe-inspiring sights and unique insights into the rich history and vibrant culture of
-            this
-            remarkable city. Whether it's a romantic escapade, a family outing, or a corporate event, our helicopter
-            tours promise
-            an unmatched and awe-inspiring experience that will leave you with memories to cherish for a lifetime.
-        </p>
-    </section>
-    <section>
-        <h2>Check out our reviews</h2>
+        <nav class="navbar navbar-expand-lg navbar">
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                <a class="navbar-brand" href="index.html"></a>
+                <img src="{{ url_for('static', filename='images/logo-black-no-background.png')}}" alt="Heli7 Logo"
+                    width="100px" height="100px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about_us.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="book.html">Pricing/Book</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="our_fleet.html">Our Fleet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sign_up.html">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact_us.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <section class="hero">
+            <div class="video-container">
+                <video width="100%" height="100%" autoplay loop muted>
+                    <source src="{{ url_for('static', filename='images/hero_vid_low_quality.webm') }}"
+                        type="video/webm">
+                </video>
+                <div class="text-overlay">
+                    <h1> Where will your next trip take you? </h1>
+                    <a class="btn btn-primary" href="book" role="button">Discover Now</a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="our-experiences" class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2>Our Experiences</h2>
+                        <p>As a premier helicopter tour company nestled in the heart of London, we offer a truly
+                            captivating and
+                            exhilarating
+                            experience that showcases the iconic city from an entirely new perspective. Our meticulously
+                            crafted
+                            helicopter tours
+                            provide passengers with a breathtaking bird's-eye view of London's most famous landmarks,
+                            including the
+                            majestic Tower
+                            Bridge, the historic Buckingham Palace, and the sprawling beauty of Hyde Park. With a fleet
+                            of
+                            state-of-the-art
+                            helicopters and a team of seasoned pilots, we ensure not only a safe and comfortable journey
+                            but also an
+                            unforgettable
+                            adventure filled with awe-inspiring sights and unique insights into the rich history and
+                            vibrant culture
+                            of
+                            this
+                            remarkable city. Whether it's a romantic escapade, a family outing, or a corporate event,
+                            our helicopter
+                            tours promise
+                            an unmatched and awe-inspiring experience that will leave you with memories to cherish for a
+                            lifetime.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="{{ url_for('static', filename='images/carousel.jpg')}}" alt="Heli7 Logo"
+                            class="experience-img img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="popular-section">
+            <h2>Popular Trips</h2>
+            <div class="popular-items">
+                <div class="popular-item">
+                    <a href="book">
+                        <img src="{{ url_for('static', filename='images/london_skyline.png')}}" alt="London skyline">
+                    </a>
+                    <h3>London</h3>
+                    <p>
+                        Experience the thrill of Londons skyline from above, book our most popular trip today!
+                    </p>
+                </div>
+                <div class="popular-item">
+                    <a href="book">
+                        <img src="{{ url_for('static', filename='images/kent.webp')}}" alt="Kent">
+                    </a>
+                    <h3> Kent Heritage</h3>
+                    <p>Enjoy views of Canterbury Cathedral, Dover Castle and the coast of Calais before swinging back
+                        round to expeirice London from a 1000ft up </p>
+                </div>
+                <div class="popular-item">
+                    <a href="book">
+                        <img src="{{ url_for('static', filename='images/Royal_surrey.jpg')}}" alt="Surrey">
+                    </a>
+                    <h3> Royal Surrey</h3>
+                    <p>Enjoy breathtaking aerial views of the serene meandering of the River Thames, set against the
+                        backdrop of the stunning Surrey Hills Area of Outstanding Natural Beauty.</p>
+                </div>
+                <div class="popular-item">
+                    <a href="book">
+                        <img src="{{ url_for('static', filename='images/medway.jpeg')}}" alt="Medway River">
+                    </a>
+                    <h3> Thames & Medway</h3>
+                    <p>The best of both worlds in this trip. Experience the spectacular London skyline, followed by a
+                        charming blend of natural beauty and maritime heritage as you follow the river Medway through
+                        Kent</p>
+                </div>
+        </section>
+        <h2> Check out our reviews</h2>
         <p>
             ⭐⭐⭐⭐⭐
-            "I can't believe how incredible the experience was with this helicopter tour company in London! From the
+            "I can't believe how incredible the experience was with this helicopter tour company in London!
+            From
+            the
             moment we
-            stepped onto the helipad, we were greeted by a friendly and professional team who made us feel at ease. The
+            stepped onto the helipad, we were greeted by a friendly and professional team who made us feel
+            at
+            ease.
+            The
             helicopter
-            ride itself was nothing short of spectacular – soaring above the city's iconic landmarks left us speechless.
+            ride itself was nothing short of spectacular – soaring above the city's iconic landmarks left us
+            speechless.
             The pilot's
-            expertise and informative commentary added a layer of depth to the tour, making it both thrilling and
+            expertise and informative commentary added a layer of depth to the tour, making it both
+            thrilling
+            and
             educational. The
-            panoramic views of London's skyline, including the dazzling lights of the Thames at sunset, were simply
+            panoramic views of London's skyline, including the dazzling lights of the Thames at sunset, were
+            simply
             breathtaking.
-            The tour was well-paced, allowing us to capture stunning photos and create unforgettable memories. This was
+            The tour was well-paced, allowing us to capture stunning photos and create unforgettable
+            memories.
+            This
+            was
             truly a
-            once-in-a-lifetime experience that I would recommend to anyone looking for a unique and awe-inspiring way to
+            once-in-a-lifetime experience that I would recommend to anyone looking for a unique and
+            awe-inspiring
+            way to
             see London.
             Thank you to the entire team for making our day so special!" - Sarah M.
             <!-- perhaps create a carousel of reviews -->
         </p>
-    </section>
+        </section>
 
-    <footer class="footer">
-        <p>&copy; Heli7 - </p>
-        <div class="social-media">
-            <!-- Add your social media badges here -->
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="faq.html">Frequently Asked Questions</a>
-                <a href="about_us.html">About Us</a>
-                <a href="contact_us.html">Contact Us</a>
-                <a> <img src="{{url_for('static', filename='images/logo-color.png')}}" alt="Heli7 logo" /></a>
-            </nav>
+        <footer class="footer">
+            <p>&copy; Heli7 London Ltd </p>
+            <div class="social-media">
+                <!-- Add your social media badges here -->
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="faq.html">Frequently Asked Questions</a>
+                    <a href="about_us.html">About Us</a>
+                    <a href="contact_us.html">Contact Us</a>
+                    <a href="gdpr.html">GDPR</a>
+
+                </nav>
 </body>
 
 </html>
