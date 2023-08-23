@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Book a Trip</title>
+    <a>
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    </a>
 </head>
+
 <body>
     <h1>Please Choose Your Destination</h1>
 
-
-     
-<div class="destination-photos">
     <div class="destination-photo">
-
-        <a> <img src="{{url_for('static', filename='images/LondonCity.avif')}}" alt="London city" /></a>
-        <p>Experience London City!</p>
-        <p>Enjoy riveting aerial views of Central London on our most popular tour! The London sightseeing 
-            tour starts with a flight across the Surrey countryside north towards Central London and 
-            follows the River Thames right through the heart of the Capital. Trip of a lifetime, take 
-            in unique views of some of Central London’s most famous landmarks: Houses of Parliament, 
-            Millennium Eye, Trafalgar Square, St Paul’s, The Globe Theatre, The City, The Tower of London, 
-            HMS Belfast, Tower Bridge, the Olympic Stadium and Canary Wharf before flying over Croydon and 
+        <a> <img src="{{url_for('static', filename='images/LondonCity.jpeg')}}" alt="London city" /></a>
+        <h2>Experience London City!</h2>
+        <p>Enjoy riveting aerial views of Central London on our most popular tour! The London sightseeing
+            tour starts with a flight across the Surrey countryside north towards Central London and
+            follows the River Thames right through the heart of the Capital. Trip of a lifetime, take
+            in unique views of some of Central London’s most famous landmarks: Houses of Parliament,
+            Millennium Eye, Trafalgar Square, St Paul’s, The Globe Theatre, The City, The Tower of London,
+            HMS Belfast, Tower Bridge, the Olympic Stadium and Canary Wharf before flying over Croydon and
             back to our base at Redhill Aerodrome.</p>
     </div>
     <div class="destination-photo">
-        <a> <img src="{{url_for('static', filename='images/Kent.webp')}}" alt="Kent" /></a>
-        <p>Explore vibrant Kent Heritage !</p>
-        <p>Sit back and relax as we take you on the Kent Heritage Tour! This fantastic tour covers a number 
-            of the historic sites in Kent; The Garden of England. Flight time is approximately 20-25 minutes, 
+        <a> <img src="{{url_for('static', filename='images/canterbury.jpeg')}}" alt="Kent" /></a>
+        <h2>Explore vibrant Kent Heritage !</h2>
+        <p>Sit back and relax as we take you on the Kent Heritage Tour! This fantastic tour covers a number
+            of the historic sites in Kent; The Garden of England. Flight time is approximately 20-25 minutes,
             air traffic allowing.</p>
     </div>
     <div class="destination-photo">
-        <a> <img src="{{url_for('static', filename='images/Thames_and_Medway.jpg')}}" alt="Medway" /></a>
-        <p>Discover Thames and Medway!</p>
-        <p> Spend a blissful hour exploring the Thames and Medway Estuaries with amazing sights of innovative 
+        <a> <img src="{{url_for('static', filename='images/medway.jpeg')}}" alt="Medway" /></a>
+        <h2>Discover Thames and Medway!</h2>
+        <p> Spend a blissful hour exploring the Thames and Medway Estuaries with amazing sights of innovative
             buildings and natural erosion showing the sheer power of rivers.</p>
     </div>
     <div class="destination-photo">
-        <a> <img src="{{url_for('static', filename='images/Royal_surrey.jpg')}}" alt="Surry" /></a>
-        <p>Relax and enjoy Royal Surrey!</p>
-        <p>Sit back and relax as we take you on the Royal Surrey Tour! This fantastic trip takes you over the 
-            beautiful Surrey countryside and combines scenic country views with historic buildings. Flight 
-            time is approximately 20-25 minutes, air traffic allowing. We recommend allowing an hour for the 
+        <a> <img src="{{url_for('static', filename='images/Kent.webp')}}" alt="Surry" /></a>
+        <h2>Relax and enjoy Royal Surrey!</h2>
+        <p>Sit back and relax as we take you on the Royal Surrey Tour! This fantastic trip takes you over the
+            beautiful Surrey countryside and combines scenic country views with historic buildings. Flight
+            time is approximately 20-25 minutes, air traffic allowing. We recommend allowing an hour for the
             whole experience with us.</p>
     </div>
-</div>
+    </div>
 
 
     <form method="POST" action="/book">
-        
+
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
-        
+
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required><br><br>
-        
+
         <label for="destination">Destination:</label>
         <select id="destination" name="destination" required>
             <option value="" disabled selected>Select a destination</option>
@@ -61,23 +62,24 @@
             <option value="Tokyo">Thames and Medway</option>
             <option value="Sydney">Royal Surrey</option>
         </select><br><br>
-        
+
         <label for="departure_date">Departure Date:</label>
         <input type="date" id="departure_date" name="departure_date" required><br><br>
-        
-            
-            <input type="hidden" id="thankYouPage" name="thankYouPage" value="thank_you.html">
-            <input type="submit" value="Submit Booking">
 
 
+<<<<<<< Updated upstream
 <div>
 <a href="/index">Return Home</a>
 </div>
+=======
+        <input type="hidden" id="thankYouPage" name="thankYouPage" value="thank_you.html">
+        <input type="submit" value="Submit Booking">
+
+
+        <div>
+            <a href="index.html">Return Home</a>
+        </div>
+>>>>>>> Stashed changes
 </body>
+
 </html>
-
-
-
-
-
-

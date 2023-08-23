@@ -5,7 +5,8 @@ h1, h2, ul, li {
     font-family: 'Montserrat', sans-serif; 
 }
 h1 {
-    font-size: 16px;
+    font-size: xx-large;
+    font-family: 'Montserrat', sans-serif;
 }
 body, p {
     margin: 5px;
@@ -102,6 +103,77 @@ video {
     /* height: auto;
     margin: 10px 10px; /* Adjust margin to give space from top and left */
     /* z-index: 1; */ 
+
+..destination-photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Style each destination photo container */
+.destination-photo {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: calc(50% - 20px); /* Adjust as needed for your layout */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the images */
+.destination-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Style the form container */
+form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style form labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style form inputs and select */
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style the "Return Home" link */
+a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
 
 
 

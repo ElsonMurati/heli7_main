@@ -1,17 +1,19 @@
 import pymysql
 from flask import Flask, render_template, request, redirect, url_for, session
 import logging
-from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
-from wtforms.validators import DataRequired
+# from flask_wtf import FlaskForm
+# from wtforms import StringField, SubmitField
+# from wtforms.validators import DataRequired
 
 app = Flask(__name__)
 # Set the SECRET_KEY for your app
+
 
 @app.route('/index', methods=['GET'])
 def view_home():
     return render_template("index.html")
 
+<<<<<<< Updated upstream
 @app.route('/about_us', methods=['GET'])
 def view_about():
     return render_template("about_us.html")
@@ -43,7 +45,10 @@ def view_gdpr():
 
 
 app.config['SECRET_KEY'] = '0123456789'
+=======
+>>>>>>> Stashed changes
 
+app.config['SECRET_KEY'] = '0123456789'
 
 
 # logging.basicConfig(filename='app.log', level=logging.INFO)
@@ -72,7 +77,8 @@ def add_customer():
         email = request.form["Email"]
         phone = request.form["Phone"]
         dob = request.form["DOB"]
-        print(title, firstname, lastname, doornumber, streetname, city, postcode, email, dob)
+        print(title, firstname, lastname, doornumber,
+              streetname, city, postcode, email, dob)
         conn = connection()
         cursor = conn.cursor()
         cursor.execute(
@@ -100,7 +106,8 @@ def login():
 
         if login:
             session['username'] = username
-            return render_template("index.html", MSG="You are Logged In as " + username )  # redirect(url_for('index'))
+            # redirect(url_for('index'))
+            return render_template("index.html", MSG="You are Logged In as " + username)
         else:
             return render_template('Login.html', MSG="Logging Failed")
     return render_template('Login.html', MSG="")
@@ -176,5 +183,3 @@ def book_trip():
 
 if __name__ == "__main__":
     app.run(port=5002)
-
-
