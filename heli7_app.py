@@ -13,40 +13,43 @@ app = Flask(__name__)
 def view_home():
     return render_template("index.html")
 
-<<<<<<< Updated upstream
+
 @app.route('/about_us', methods=['GET'])
 def view_about():
     return render_template("about_us.html")
+
 
 @app.route('/our_fleet', methods=['GET'])
 def view_fleet():
     return render_template("our_fleet.html")
 
+
 @app.route('/signup', methods=['GET'])
 def view_sign():
     return render_template("signup.html")
+
 
 @app.route('/login', methods=['GET'])
 def view_login():
     return render_template("login.html")
 
+
 @app.route('/contact_us', methods=['GET'])
 def view_contact():
     return render_template("contact_us.html")
 
+
 @app.route('/faq', methods=['GET'])
 def view_faq():
     return render_template("faq.html")
+
 
 @app.route('/gdpr', methods=['GET'])
 def view_gdpr():
     return render_template("gdpr.html")
 
 
-
 app.config['SECRET_KEY'] = '0123456789'
-=======
->>>>>>> Stashed changes
 
 app.config['SECRET_KEY'] = '0123456789'
 
