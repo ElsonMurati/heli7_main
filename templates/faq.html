@@ -1,58 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helicopter Trip FAQ</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        .question {
-            font-weight: bold;
-        }
-    </style>
+    <a>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@400&display=swap"
+            rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    </a>
 </head>
-<body>
-    <h1>Helicopter Trip FAQ</h1>
-    
-    <div class="question">Q: What is the minimum age requirement for passengers??</div>
-    <p>A:Children must be three years of age or above to be carried on any of our Flight Experience, Sightseeing or Pleasure Flights. All Children under 10 years of age must be accompanied by an adult.</p>
-    
-    <div class="question">Q: How do I make a reservation?</div>
-    <p>A: Reservations can be made through our <a href="book.html">Booking</a> page. Simply choose your preferred package, select the date and time, and complete the booking process.</p>
-    
-    <div class="question">Q: What is the duration of the helicopter ride?</div>
-    <p>A: The duration varies depending on the package you choose. Most tours range from 30 minutes to 1 hour of flight time.</p>
-    
-    <div class="question">Q: Are there any age restrictions?</div>
-    <p>A: We welcome passengers of all ages. However, for safety reasons, children under the age of 2 are not permitted on board.</p>
-    
-    <div class="question">Q: How many passengers can the helicopter accommodate?</div>
-    <p>A: one to three passengers</p>
-    
-    <div class="question">Q: Can I bring bags or backpacks?</div>
-    <p>A: Due to limited cabin space, we advise passengers to bring only small bags or personal items. Larger bags and backpacks will not be allowed on board.</p>
-    
-    <div class="question">Q: Is there a weight limit for passengers?</div>
-    <p>A: Yes, there is a weight limit per passenger to ensure the safety and balance of the helicopter. Please refer to the specific package details for weight restrictions.</p>
-        
-    <div class="question">Q: Are pets allowed on board?</div>
-    <p>A: Unfortunately, for the safety and comfort of all passengers, pets are not allowed on our helicopter tours.</p>
-    
-    <div class="question">Q: How early should I arrive for my flight?</div>
-    <p>A: We recommend arriving at least 30 minutes before your scheduled departure time to allow for check-in and pre-flight instructions.</p>
-    
-    <div class="question">Q: Is tipping the pilot required?</div>
-    <p>A: While not required, if you enjoyed your flight and the service provided by our pilot, you are welcome to tip as a gesture of appreciation.</p>
 
-    <div>
-        <a href="/index">Return Home</a>
-        </div>
-</body>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar">
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                <a class="navbar-brand" href="index.html"></a>
+                <img src="{{ url_for('static', filename='images/logo-black-no-background.png')}}" alt="Heli7 Logo"
+                    width="100px" height="100px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about_us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/book">Pricing/Book</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/our_fleet">Our Fleet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/signup">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact_us">Contact Us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .question {
+                font-weight: bold;
+            }
+        </style>
+        </head>
+
+        <body>
+            <h1>Helicopter Trip FAQ</h1>
+
+            <div class="question">Q: What is the minimum age requirement for passengers??</div>
+            <p>A:Children must be three years of age or above to be carried on any of our Flight Experience, Sightseeing
+                or Pleasure Flights. All Children under 10 years of age must be accompanied by an adult.</p>
+
+            <div class="question">Q: How do I make a reservation?</div>
+            <p>A: Reservations can be made through our <a href="book.html">Booking</a> page. Simply choose your
+                preferred package, select the date and time, and complete the booking process.</p>
+
+            <div class="question">Q: What is the duration of the helicopter ride?</div>
+            <p>A: The duration varies depending on the package you choose. Most tours range from 30 minutes to 1 hour of
+                flight time.</p>
+
+            <div class="question">Q: Are there any age restrictions?</div>
+            <p>A: We welcome passengers of all ages. However, for safety reasons, children under the age of 2 are not
+                permitted on board.</p>
+
+            <div class="question">Q: How many passengers can the helicopter accommodate?</div>
+            <p>A: one to three passengers</p>
+
+            <div class="question">Q: Can I bring bags or backpacks?</div>
+            <p>A: Due to limited cabin space, we advise passengers to bring only small bags or personal items. Larger
+                bags and backpacks will not be allowed on board.</p>
+
+            <div class="question">Q: Is there a weight limit for passengers?</div>
+            <p>A: Yes, there is a weight limit per passenger to ensure the safety and balance of the helicopter. Please
+                refer to the specific package details for weight restrictions.</p>
+
+            <div class="question">Q: Are pets allowed on board?</div>
+            <p>A: Unfortunately, for the safety and comfort of all passengers, pets are not allowed on our helicopter
+                tours.</p>
+
+            <div class="question">Q: How early should I arrive for my flight?</div>
+            <p>A: We recommend arriving at least 30 minutes before your scheduled departure time to allow for check-in
+                and pre-flight instructions.</p>
+
+            <div class="question">Q: Is tipping the pilot required?</div>
+            <p>A: While not required, if you enjoyed your flight and the service provided by our pilot, you are welcome
+                to tip as a gesture of appreciation.</p>
+
+            <div>
+                <a href="/index">Return Home</a>
+            </div>
+        </body>
+
 </html>

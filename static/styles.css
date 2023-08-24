@@ -9,8 +9,6 @@ h1 {
     font-family: 'Montserrat', sans-serif;
 }
 body, p {
-    margin: 5px;
-    padding: 0;
     font-family: 'Montserrat', sans-serif;
     font-size: medium;
 }
@@ -69,7 +67,7 @@ video {
 
 .popular-item img {
     max-width: 100%;
-    height: 200px;
+    height: 190px;
     object-fit: cover;
     border: 2px solid #ccc;
     border-radius: 8px;
@@ -104,7 +102,7 @@ video {
     margin: 10px 10px; /* Adjust margin to give space from top and left */
     /* z-index: 1; */ 
 
-..destination-photos {
+.destination-photos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -166,12 +164,10 @@ input[type="submit"] {
     font-size: 16px;
 }
 
-/* Style the "Return Home" link */
-a {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #007bff;
+
+.container_booking {
+
+
 }
 
 

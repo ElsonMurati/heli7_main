@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <a>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@400&display=swap"
+            rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    </a>
 </head>
+
 <body>
     <div class="login-form">
         <h2>Login</h2>
@@ -20,6 +30,68 @@
     <div>
         <a href="/index"><button> Home Page</button></a>
         </div>
-  
-</body>
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar">
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                <a class="navbar-brand" href="index.html"></a>
+                <img src="{{ url_for('static', filename='images/logo-black-no-background.png')}}" alt="Heli7 Logo"
+                    width="100px" height="100px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about_us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/book">Pricing/Book</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/our_fleet">Our Fleet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/signup">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact_us">Contact Us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        </header>
+
+            <div class="login-form">
+                <h2>Login</h2>
+                <p>{{MSG}}</p>
+                <form method="POST" action="">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+
+            <div>
+                <a href="/index">Return Home</a>
+            </div>
+
+        </body>
+
 </html>
+
