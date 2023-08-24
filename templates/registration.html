@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Registration Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 <form action="" method="post">
@@ -28,6 +29,9 @@ Date of Birth<input type="text" name="DOB">
     <br>
 <input type="submit" name="submit">
 </form>
-
+    <br>
+    <div>
+    <a href="/index">Return Home</a>
+    </div>
 </body>
 </html>

@@ -1,11 +1,14 @@
 import pymysql
 from flask import Flask, render_template, request, redirect, url_for, session
 import logging
+
 # from flask_wtf import FlaskForm
 # from wtforms import StringField, SubmitField
 # from wtforms.validators import DataRequired
 
 app = Flask(__name__)
+
+
 # Set the SECRET_KEY for your app
 
 
@@ -13,45 +16,48 @@ app = Flask(__name__)
 def view_home():
     return render_template("index.html")
 
-<<<<<<< Updated upstream
+
 @app.route('/about_us', methods=['GET'])
 def view_about():
     return render_template("about_us.html")
+
 
 @app.route('/our_fleet', methods=['GET'])
 def view_fleet():
     return render_template("our_fleet.html")
 
+
 @app.route('/signup', methods=['GET'])
 def view_sign():
     return render_template("signup.html")
+
 
 @app.route('/login', methods=['GET'])
 def view_login():
     return render_template("login.html")
 
+
 @app.route('/contact_us', methods=['GET'])
 def view_contact():
     return render_template("contact_us.html")
 
+
 @app.route('/faq', methods=['GET'])
 def view_faq():
     return render_template("faq.html")
+
 
 @app.route('/gdpr', methods=['GET'])
 def view_gdpr():
     return render_template("gdpr.html")
 
 
+@app.route('/registration', methods=['GET'])
+def view_registration():
+    return render_template("registration.html")
+
 
 app.config['SECRET_KEY'] = '0123456789'
-=======
->>>>>>> Stashed changes
-
-app.config['SECRET_KEY'] = '0123456789'
-
-
-# logging.basicConfig(filename='app.log', level=logging.INFO)
 
 
 def connection():
@@ -84,7 +90,7 @@ def add_customer():
         cursor.execute(
             "insert into customers(Title, FirstName, LastName, DoorNumber, StreetName, City, PostCode, email, phone, DOB) values ('" + title + "','" + firstname + "','" + lastname + "','" + doornumber + "','" + streetname + "','" + city + "','" + postcode + "','" + phone + "','" + email + "','" + dob + "')")
         return "Your Registration Was Successful"
-    return render_template("Customer_registration.html")
+    return render_template("registration.html")
 
 
 @app.route('/')
@@ -107,7 +113,7 @@ def login():
         if login:
             session['username'] = username
             # redirect(url_for('index'))
-            return render_template("index.html", MSG="You are Logged In as " + username)
+            return render_template("index.html", MSG="Welcome " + username)
         else:
             return render_template('Login.html', MSG="Logging Failed")
     return render_template('Login.html', MSG="")
@@ -130,7 +136,7 @@ def logout():
     return redirect(url_for('index'))
 
 
-@app.route('/user', methods=['GET', 'POST'])
+@app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
         username = request.form.get('username')
@@ -166,7 +172,7 @@ def book_trip():
         destination = request.form.get("destination")
         departure_date = request.form.get("departure_date")
 
-# To store in Database
+        # To store in Database
         insert_query = """
             INSERT INTO bookings (name, email, destination, departure_date)
             VALUES (%s, %s, %s, %s)
@@ -178,8 +184,8 @@ def book_trip():
 
         return render_template("thank_you.html")
 
-    return render_template("book.html")
+    return render_template("book.html", MSG="Welcome")
 
 
 if __name__ == "__main__":
-    app.run(port=5002)
+    app.run(debug=True)
