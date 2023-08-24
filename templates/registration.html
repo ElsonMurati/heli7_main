@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Registration Page</title>
+
     <a>
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@400&display=swap"
@@ -13,9 +14,41 @@
         <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     </a>
-</head>
 
+</head>
 <body>
+<form action="" method="post">
+Title<input type="text" name="Title">
+    <br>
+First Name<input type="text" name="FirstName">
+    <br>
+Last Name<input type="text" name="LastName">
+    <br>
+Door Number<input type="text" name="DoorNumber">
+    <br>
+Street Name<input type="text" name="StreetName">
+    <br>
+City<input type="text" name="City">
+    <br>
+Post Code<input type="text" name="PostCode">
+    <br>
+Email<input type="text" name="Email">
+    <br>
+Phone Number<input type="text" name="Phone">
+    <br>
+Date of Birth<input type="text" name="DOB">
+    <br>
+<input type="submit" name="submit">
+</form>
+    <br>
+    <div>
+    <a href="/index">Return Home</a>
+    </div>
+
+
+
+
+
     <header>
         <nav class="navbar navbar-expand-lg navbar">
             <div class="container-fluid">
@@ -59,9 +92,8 @@
                 </div>
             </div>
         </nav>
-        </head>
+        </header>
 
-        <body>
             <form action="" method="post">
                 Title<input type="text" name="Title">
                 <br>
