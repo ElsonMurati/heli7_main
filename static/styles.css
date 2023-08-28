@@ -71,7 +71,7 @@ video {
     object-fit: cover;
     border: 2px solid #ccc;
     border-radius: 8px;
-    transition: transform 0.3s ease;]]
+    transition: transform 0.3s ease;
 }
 
 .popular-item:hover {
@@ -165,10 +165,10 @@ input[type="submit"] {
 }
 
 
-.container_booking {
+/* .container_booking {
 
 
-}
+} */
 
 
 
@@ -177,7 +177,7 @@ input[type="submit"] {
 @media (max-width: 768px) {
     .top-middle-nav ul {
         flex-direction: column;
-        align-items: center;
+        align-items: center;}
     }
     @media (max-width: 768px) {
         .text-overlay {

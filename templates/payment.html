@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment page</title>
+    <a>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@400&display=swap"
+            rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    </a>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar">
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                <a class="navbar-brand" href="index.html"></a>
+                <img src="{{ url_for('static', filename='images/logo-black-no-background.png')}}" alt="Heli7 Logo"
+                    width="100px" height="100px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about_us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/book">Pricing/Book</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/our_fleet">Our Fleet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/registration">Registration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact_us">Contact Us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        </header>
+        <section>
+        <h1>Please Make Payment</h1>
+        </section>
+
+        <!-- CREATE TABLE `heli7`.`cardpayment` (
+            `customerid` INT NOT NULL AUTO_INCREMENT,
+            `nameoncard` VARCHAR(100) NULL,
+            `cardnumber` VARCHAR(50) NULL,
+            `expmonth` DATE NULL,
+            `expyear` DATE NULL,
+            `csv` VARCHAR(100) NULL,
+            PRIMARY KEY (`customerid`)); -->
+            <form method="POST" action="/payment">
+
+                <label for="nameoncard">Name on Card:</label>
+                <input type="text" id="nameoncard" name="nameoncard" required><br><br>
+    
+                <label for="cardnumber">Card Number:</label>
+                <input type="text" id="cardnumber" name="cardnumber" required><br><br>
+
+                <label for="expmonth">EXP Month:</label>
+                <select id="monthSelect">
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select><br><br>
+
+                <label for="expyear">EXP Year:</label>
+                <select id="year" name="year">
+                    <option value="2022">2023</option>
+                    <option value="2023">2022</option>
+                    <option value="2024">2021</option>
+                    <option value="2025">2023</option>
+                    <option value="2026">2022</option>
+                    <option value="2027">2021</option>
+                    <option value="2028">2023</option>
+                    <option value="2029">2022</option>
+                    <option value="2030">2021</option>
+                </select><br><br>
+    
+                <label for="csv">CSV:</label>
+                <input type="text" id="csv" name="csv" required><br><br>
+
+                </select><br><br>
+    
+
+            <input type="hidden" id="thankYouPage" name="thankYouPage" value="thank_you.html">
+            <input type="submit" value="Submit Booking">
+    
+            <br>
+                <a href="/index">Return Home</a>
+    </body>
+    
+    </html>

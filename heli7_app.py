@@ -62,7 +62,10 @@ app.config['SECRET_KEY'] = '0123456789'
 
 def connection():
     server = 'localhost'
+    # adrians database
+    # db = 'heli7_project'
     db = 'heli7'
+    # pattricks database
     uid = 'sky'
     pwd = 'P@$$word'
     conn = pymysql.Connect(host=server, user=uid, password=pwd, database=db)
@@ -182,9 +185,32 @@ def book_trip():
         cursor = conn.cursor()
         cursor.execute(insert_query, data)
 
-        return render_template("thank_you.html")
+        return render_template("payment.html")
 
     return render_template("book.html", MSG="Welcome")
+
+
+@app.route('/payment', methods=["GET", "POST"])
+def make_payment():
+    if request.method == "POST":
+        nameoncard = request.form.get("nameoncard")
+        cardnumber = request.form.get("cardnumber")
+        expmonth = request.form.get("expmonth")
+        expyear = request.form.get("expyear")
+        csv = request.form.get("csv")
+
+        # To store in Database
+        insert_query = """
+            INSERT INTO cardpayment (nameoncard, cardnumber, expmonth, expyear, csv)
+            VALUES (%s, %s, %s, %s, %s)
+        """
+        data = (nameoncard, cardnumber, expmonth, expyear, csv)
+        conn = connection()
+        cursor = conn.cursor()
+        cursor.execute(insert_query, data)
+
+        return render_template("thank_you.html")
+    return render_template("payment.html", MSG="Welcome")
 
 
 if __name__ == "__main__":
