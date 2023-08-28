@@ -73,7 +73,7 @@ def connection():
     return conn
 
 
-@app.route('/customer/add', methods=['GET', 'POST'])
+@app.route('/registration', methods=['GET', 'POST'])
 def add_customer():
     if request.method == 'POST':
         title = request.form["Title"]
@@ -87,12 +87,12 @@ def add_customer():
         phone = request.form["Phone"]
         dob = request.form["DOB"]
         print(title, firstname, lastname, doornumber,
-              streetname, city, postcode, email, dob)
+              streetname, city, postcode, email, phone, dob)
         conn = connection()
         cursor = conn.cursor()
         cursor.execute(
             "insert into customers(Title, FirstName, LastName, DoorNumber, StreetName, City, PostCode, email, phone, DOB) values ('" + title + "','" + firstname + "','" + lastname + "','" + doornumber + "','" + streetname + "','" + city + "','" + postcode + "','" + phone + "','" + email + "','" + dob + "')")
-        return "Your Registration Was Successful"
+        return render_template('reg_confirm.html')
     return render_template("registration.html")
 
 
@@ -115,7 +115,7 @@ def login():
 
         if login:
             session['username'] = username
-            # redirect(url_for('index'))
+            redirect(url_for('index'))
             return render_template("index.html", MSG="Welcome " + username)
         else:
             return render_template('Login.html', MSG="Logging Failed")
@@ -158,13 +158,9 @@ def signup():
             return render_template('signup.html', error=str(e))
         finally:
             conn.close()
-
+            return render_template('signup_confirm.html', error=None)
     return render_template('signup.html', error=None)
 
-
-@app.route('/success')
-def success():
-    return "User registered successfully!"
 
 
 @app.route('/book', methods=["GET", "POST"])
@@ -214,4 +210,4 @@ def make_payment():
 
 
 if __name__ == "__main__":
-    app.run(port=5002)
+    app.run(debug=True)
