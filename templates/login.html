@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Login</title>
+    <title>Sign Up</title>
     <a>
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@400&display=swap"
@@ -14,8 +14,8 @@
     </a>
 </head>
 
-<body>
 
+<body>
     <header>
         <nav class="navbar navbar-expand-lg navbar">
             <div class="container-fluid">
@@ -60,21 +60,37 @@
             </div>
         </nav>
     </header>
-
-    <div class="login-form">
-        <h2>Login</h2>
+    <h2>Login</h2>
+    <div class="login-container" class="form-group">
         <p>{{MSG}}</p>
-        <form method="POST" action="">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Login</button>
+        <form method="POST" action="{{ url_for('login') }}">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button class="btn btn-primary" role="button" type="submit">Login</button>
+            <p>Don't have an account? <a href="signup">Sign Up</a></p>
         </form>
     </div>
-
-    <div>
-        <a class="btn btn-primary" href="signup" role="button">Sign Up</a>
-    </div>
-
+    <section>
+        <!-- <footer class="footer">
+            <p>&copy; Heli7 London Ltd </p>
+            <nav>
+                <a href="/index">Home</a>
+                <a href="/faq">Frequently Asked Questions</a>
+                <a href="/about_us">About Us</a>
+                <a href="/contact_us">Contact Us</a>
+                <a href="/gdpr">GDPR</a>
+            </nav> -->
+    </section>
+    </footer>
 </body>
 
 </html>
+
+<!-- <input type="text" name="username" placeholder="Username" required>
+<input type="password" name="password" placeholder="Password" required> -->

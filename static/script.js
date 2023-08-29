@@ -1,4 +1,5 @@
-var slideIndex = 1;
+<script>
+  var slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -24,9 +25,7 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
-
-<script>
-    $(document).ready(function () {
+$(document).ready(function () {
         $('form').on('submit', function (e) {
             e.preventDefault();
             
@@ -43,4 +42,5 @@ function showSlides(n) {
             });
         });
     });
+
 </script>

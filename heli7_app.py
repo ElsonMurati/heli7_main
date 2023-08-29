@@ -226,8 +226,6 @@ def search():
     # Handle the case when no results are found
     return render_template('no_results.html')
 
-# Define a route for 'our_fleet.html' if it doesn't already exist
-
 
 @app.route('/our_fleet')
 def our_fleet():

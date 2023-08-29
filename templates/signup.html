@@ -58,36 +58,47 @@
                 </div>
             </div>
         </nav>
-        <section class="hero-signup">
-            <div class="video-container-signup">
-                <video width="100%" height="100%" autoplay loop muted>
-                    <source src="{{ url_for('static', filename='images/hero_vid.webm') }}" type="video/webm">
-                </video>
 
     </header>
-    <h1>Sign Up</h1>
-    <div class="signup-container">
-        {% if error %}
-        <p style="color: red;">Error: {{ error }}</p>
-        {% endif %}
-        <form method="post" action="{{ url_for('signup') }}">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
+    <section>
+        <h1>Sign Up</h1>
+        <div class="signup-container">
+            {% if error %}
+            <p style="color: red;">Error: {{ error }}</p>
+            {% endif %}
+            <form method="post" action="{{ url_for('signup') }}">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
 
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
 
-            <button type="submit">Sign Up</button>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </section>
+    <section>
+        <!-- <footer class="footer">
+            <p>&copy; Heli7 London Ltd </p>
+            <nav>
+                <a href="/index">Home</a>
+                <a href="/faq">Frequently Asked Questions</a>
+                <a href="/about_us">About Us</a>
+                <a href="/contact_us">Contact Us</a>
+                <a href="/gdpr">GDPR</a>
+            </nav> -->
 
+        </footer>
+    </section>
 
 </body>
 
