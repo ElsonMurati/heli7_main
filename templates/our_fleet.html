@@ -3,9 +3,6 @@
 
 <head>
 
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Fleet</title>
   <a>
     <link
@@ -64,24 +61,36 @@
     </nav>
   </header>
 
+  <section>
+    <h1>Our Fleet</h1>
 
-  <h1>Our Fleet</h1>
 
+    <div class="container_booking">
+      <div class="row row-cols-4">
+ 
+        <div class="destination-photo">
 
+           <a> <img src="{{url_for('static', filename='images/Twin-Squirrel.jpg')}}" alt="Twin-Squirrel" /></a>
+          <p>The Twin-Squirrel</p>
+          <p>Whether it be VIP or corporate travel, or a dedicated sightseeing journey, the Aerospatiale AS350
+           Single Squirrel caters to all requirements.
+          </p>
 
-  <div class="ourfleet-photos">
-    <div class="ourfleet-photo">
-
-      <a> <img src="{{url_for('static', filename='images/Twin-Squirrel.jpg')}}" alt="Twin-Squirrel" /></a>
-      <p>The Twin-Squirrel</p>
-      <p>Whether it be VIP or corporate travel, or a dedicated sightseeing journey, the Aerospatiale AS350
-        Single Squirrel caters to all requirements.
-      </p>
-
-      <p>This spacious and comfortable aircraft offers excellent rear seat visibility, and is one of the largest
+          <p>This spacious and comfortable aircraft offers excellent rear seat visibility, and is one of the largest
         single engine turbine helicopters available. </p>
+        </div>
 
+        <div class="destination-photo">
 
+          <a> <img src="{{url_for('static', filename='images/Robinson66.jpg')}}" alt="Robinson" /></a>
+          <p>The Robinson R44</p>
+          <p>The Robinson R44 is a four-seat light helicopter which has been in production since 1993. It features 
+            an enclosed cabin with two rows of side-by-side seating for a pilot and three passengers, a semi-rigid 
+            two-bladed main rotor and a two-bladed tail rotor and a skid landing gear.
+          </p>
+
+      </div>
+    </section>
 
 </body>
 
