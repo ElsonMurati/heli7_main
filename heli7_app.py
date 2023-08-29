@@ -208,5 +208,31 @@ def make_payment():
     return render_template("payment.html", MSG="Welcome")
 
 
+@app.route('/search', methods=['GET'])
+def search():
+    query = request.args.get('query')
+
+    # Perform a search based on the 'query' parameter
+    # You can use this query to search your database or perform any other search operation
+
+    # For demonstration purposes, let's assume a simple list of results
+    results = ['our_fleet.html']
+
+    # Redirect to the desired HTML page if a result is found
+    if results:
+        # In this example, we'll redirect to 'our_fleet.html'
+        return redirect(url_for('our_fleet'))
+
+    # Handle the case when no results are found
+    return render_template('no_results.html')
+
+# Define a route for 'our_fleet.html' if it doesn't already exist
+
+
+@app.route('/our_fleet')
+def our_fleet():
+    return render_template('our_fleet.html')
+
+
 if __name__ == "__main__":
     app.run(port=5002)

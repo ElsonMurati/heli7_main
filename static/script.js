@@ -24,3 +24,23 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+<script>
+    $(document).ready(function () {
+        $('form').on('submit', function (e) {
+            e.preventDefault();
+            
+            var query = $('input[name="query"]').val();
+            
+            $.ajax({
+                url: '/search',
+                type: 'GET',
+                data: { query: query },
+                success: function (data) {
+                    // Update the search results section with the data received
+                    $('#search-results').html(data);
+                }
+            });
+        });
+    });
+</script>
