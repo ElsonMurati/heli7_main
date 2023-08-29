@@ -48,8 +48,7 @@ video {
 
 .popular-section {
     background-color: #f7f7f7;
-    padding-top: 0.5%;
-    padding-bottom: 0%;
+    padding: 1.5%;
     text-align: center;
 }
 
@@ -58,24 +57,25 @@ video {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 10px;
+    padding: 1.5%;
 }
 
 .popular-item {
-    max-width: 250px;
+    max-width: 300px;
     text-align: center;
 }
 
 .popular-item img {
     max-width: 100%;
-    height: 190px;
+    height: 200px;
     object-fit: cover;
     border: 2px solid #ccc;
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .popular-item:hover {
-    transform: scale(1.05); /* Scale the image to 120% on hover */
+    transform: scale(1.10); /* Scale the image to 120% on hover */
     cursor: pointer;
 }
 
@@ -88,19 +88,81 @@ video {
     font-size: 0.9rem;
 }
 
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    background color: #000;
+  }
+  
+  /* Slides */
+  .mySlides {
+    display: none;
+    padding: 80px;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+  
+  .dot-container {
+    position: relative;
+    text-align: center;
+    padding: 10px 0; /* Adjust the padding */
+    background: transparent;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px; /* Adjust the margin */
+    background-color: #888;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+  /* Add a background color to the active dot/circle */
+  .active, .dot:hover {
+    background-color: #ddd;
+  }
+  
+  /* Add an italic font style to all quotes */
+  q {font-style: italic;}
+  
+  /* Add a blue color to the author */
+  .author {color: #007bff;}
   
 .footer {
     text-align: center;
 }
-
-/* logo  */
-/* .logo {
-    position: absolute;
-    display: block;
-    max-width: 200px; /* Adjust the width as needed */
-    /* height: auto;
-    margin: 10px 10px; /* Adjust margin to give space from top and left */
-    /* z-index: 1; */ 
 
 .destination-photos {
     display: flex;

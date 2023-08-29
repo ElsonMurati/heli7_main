@@ -22,7 +22,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
                 <a class="navbar-brand" href="index.html"></a>
                 <img src="{{ url_for('static', filename='images/logo-black-no-background.png')}}" alt="Heli7 Logo"
-                    width="100px" height="100px" >
+                    width="100px" height="100px">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +50,7 @@
                             <a class="nav-link" href="/login">Login</a>
                             {% endif %}
                             {% if 'username' in session %}
-                            <a class="nav-link" href="/logout" >Logout</a>
+                            <a class="nav-link" href="/logout">Logout</a>
                             {% endif %}
                         </li>
                         <li class="nav-item">
@@ -67,8 +67,7 @@
         <section class="hero">
             <div class="video-container">
                 <video width="100%" height="100%" autoplay loop muted>
-                    <source src="{{ url_for('static', filename='images/hero_vid_low_quality.webm') }}"
-                        type="video/webm">
+                    <source src="{{ url_for('static', filename='images/hero_vid.webm') }}" type="video/webm">
                 </video>
                 <div class="text-overlay">
                     <h1> Where will your next trip take you? </h1>
@@ -114,7 +113,7 @@
                 </div>
             </div>
         </section>
-            <section class="popular-section">
+        <section class="popular-section">
             <h2>Popular Trips</h2>
             <div class="popular-items">
                 <div class="popular-item">
@@ -123,7 +122,8 @@
                     </a>
                     <h3>London</h3>
                     <p>
-                        Experience the thrill of Londons skyline from above, book our most popular trip today!
+                        Experience the thrill of Londons skyline from above, get a birds eye view at The Shard, Big Ben
+                        and many more landmarks the capital has to offer.
                     </p>
                 </div>
                 <div class="popular-item">
@@ -136,7 +136,7 @@
                 </div>
                 <div class="popular-item">
                     <a href="book">
-                        <img src="{{ url_for('static', filename='images/Royal_surrey.jpg')}}" alt="Surrey">
+                        <img src="{{ url_for('static', filename='images/Royal_surrey.jpeg')}}" alt="Surrey">
                     </a>
                     <h3> Royal Surrey</h3>
                     <p>Enjoy breathtaking aerial views of the serene meandering of the River Thames, set against the
@@ -147,46 +147,101 @@
                         <img src="{{ url_for('static', filename='images/medway.jpeg')}}" alt="Medway River">
                     </a>
                     <h3> Thames & Medway</h3>
-                    <p>The best of both worlds in this trip. Experience the spectacular London skyline, followed by a
+                    <p> Experience the spectacular London skyline, followed by a
                         charming blend of natural beauty and maritime heritage as you follow the river Medway through
                         Kent</p>
                 </div>
-            </section>
-        <h2> Check out our reviews</h2>
-        <p>
-            ⭐⭐⭐⭐⭐
-            "I can't believe how incredible the experience was with this helicopter tour company in London!
-            From
-            the
-            moment we
-            stepped onto the helipad, we were greeted by a friendly and professional team who made us feel
-            at
-            ease.
-            The
-            helicopter
-            ride itself was nothing short of spectacular – soaring above the city's iconic landmarks left us
-            speechless.
-            The pilot's
-            expertise and informative commentary added a layer of depth to the tour, making it both
-            thrilling
-            and
-            educational. The
-            panoramic views of London's skyline, including the dazzling lights of the Thames at sunset, were
-            simply
-            breathtaking.
-            The tour was well-paced, allowing us to capture stunning photos and create unforgettable
-            memories.
-            This
-            was
-            truly a
-            once-in-a-lifetime experience that I would recommend to anyone looking for a unique and
-            awe-inspiring
-            way to
-            see London.
-            Thank you to the entire team for making our day so special!" - Sarah M.
-            <!-- perhaps create a carousel of reviews -->
-        </p>
         </section>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width slides/quotes -->
+            <div class="mySlides">
+                <q>⭐⭐⭐⭐⭐
+                    "I can't believe how incredible the experience was with this helicopter tour company in London!
+                    From
+                    the
+                    moment we
+                    stepped onto the helipad, we were greeted by a friendly and professional team who made us feel
+                    at
+                    ease.
+                    The
+                    helicopter
+                    ride itself was nothing short of spectacular – soaring above the city's iconic landmarks left us
+                    speechless.
+                    The pilot's
+                    expertise and informative commentary added a layer of depth to the tour, making it both
+                    thrilling
+                    and
+                    educational. The
+                    panoramic views of London's skyline, including the dazzling lights of the Thames at sunset, were
+                    simply
+                    breathtaking.
+                    The tour was well-paced, allowing us to capture stunning photos and create unforgettable
+                    memories.
+                    This
+                    was
+                    truly a
+                    once-in-a-lifetime experience that I would recommend to anyone looking for a unique and
+                    awe-inspiring
+                    way to
+                    see London.
+                    Thank you to the entire team for making our day so special!"
+                </q>
+                <p class="author">- Elson Murati</p>
+            </div>
+
+            <div class="mySlides">
+                <q>⭐⭐⭐⭐⭐
+
+                    "My helicopter tour of Kent was an unforgettable experience! From start to finish, it was pure
+                    excitement. The moment I boarded the helicopter, I knew I was in for something special.
+
+                    The aerial views of Kent were absolutely breathtaking. We glided over lush countryside, picturesque
+                    villages, and historic landmarks. Seeing the Garden of England from the sky provided a whole new
+                    perspective.
+
+                    I couldn't get enough of the stunning vistas, and the tour was perfectly timed to capture the beauty
+                    of Kent in all its glory.
+
+                    If you're seeking a unique adventure and a chance to appreciate the natural and cultural wonders of
+                    Kent, this helicopter tour is a must-do. It left me with cherished memories and a newfound
+                    appreciation for this remarkable region."</q>
+                <p class="author">- Adrian Laidler</p>
+            </div>
+
+            <div class="mySlides">
+                <q>⭐⭐⭐⭐⭐
+
+                    "My helicopter tour over the Thames & Medway was an absolutely incredible experience! From the
+                    moment I stepped into the helicopter, I knew I was in for something truly special.
+
+                    Flying over the Thames & Medway, I was treated to stunning views of the rivers winding through the
+                    picturesque English countryside. The bird's-eye perspective offered a unique and breathtaking look
+                    at the natural beauty and historical significance of this region.
+
+                    The timing of the tour was perfect. I had the opportunity to witness the rivers in all their glory,
+                    with the sun casting a golden glow over the water, creating a truly magical atmosphere.
+
+                    If you're looking for an unforgettable adventure that showcases the beauty and heritage of the
+                    Thames & Medway, I wholeheartedly recommend this helicopter tour. It left me with cherished memories
+                    and a newfound appreciation for these remarkable rivers."</q>
+                <p class="author">- Patrick Whelan</p>
+
+            </div>
+
+            <!-- Next/prev buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <!-- Dots/bullets/indicators -->
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
 
         <footer class="footer">
             <p>&copy; Heli7 London Ltd </p>
@@ -198,10 +253,8 @@
                     <a href="/about_us">About Us</a>
                     <a href="/contact_us">Contact Us</a>
                     <a href="/gdpr">GDPR</a>
-
                 </nav>
-    </header>
-
 </body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </html>

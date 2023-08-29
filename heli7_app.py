@@ -162,7 +162,6 @@ def signup():
     return render_template('signup.html', error=None)
 
 
-
 @app.route('/book', methods=["GET", "POST"])
 def book_trip():
     if request.method == "POST":
@@ -210,4 +209,4 @@ def make_payment():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(port=5002)

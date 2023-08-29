@@ -60,12 +60,12 @@
                 </div>
             </div>
         </nav>
-        </header>
-        <section>
+    </header>
+    <section>
         <h1>Please Make Payment</h1>
-        </section>
+    </section>
 
-        <!-- CREATE TABLE `heli7`.`cardpayment` (
+    <!-- CREATE TABLE `heli7`.`cardpayment` (
             `customerid` INT NOT NULL AUTO_INCREMENT,
             `nameoncard` VARCHAR(100) NULL,
             `cardnumber` VARCHAR(50) NULL,
@@ -73,54 +73,53 @@
             `expyear` DATE NULL,
             `csv` VARCHAR(100) NULL,
             PRIMARY KEY (`customerid`)); -->
-            <form method="POST" action="/payment">
+    <form method="POST" action="/payment">
 
-                <label for="nameoncard">Name on Card:</label>
-                <input type="text" id="nameoncard" name="nameoncard" required><br><br>
-    
-                <label for="cardnumber">Card Number:</label>
-                <input type="text" id="cardnumber" name="cardnumber" required><br><br>
+        <label for="nameoncard">Name on Card:</label>
+        <input type="text" id="nameoncard" name="nameoncard" required><br><br>
 
-                <label for="expmonth">EXP Month:</label>
-                <select id="monthSelect">
-                    <option value="01">January</option>
-                    <option value="02">February</option>
-                    <option value="03">March</option>
-                    <option value="04">April</option>
-                    <option value="05">May</option>
-                    <option value="06">June</option>
-                    <option value="07">July</option>
-                    <option value="08">August</option>
-                    <option value="09">September</option>
-                    <option value="10">October</option>
-                    <option value="11">November</option>
-                    <option value="12">December</option>
-                </select><br><br>
+        <label for="cardnumber">Card Number:</label>
+        <input type="text" id="cardnumber" name="cardnumber" required><br><br>
 
-                <label for="expyear">EXP Year:</label>
-                <select id="year" name="year">
-                    <option value="2022">2023</option>
-                    <option value="2023">2022</option>
-                    <option value="2024">2021</option>
-                    <option value="2025">2023</option>
-                    <option value="2026">2022</option>
-                    <option value="2027">2021</option>
-                    <option value="2028">2023</option>
-                    <option value="2029">2022</option>
-                    <option value="2030">2021</option>
-                </select><br><br>
-    
-                <label for="csv">CSV:</label>
-                <input type="text" id="csv" name="csv" required><br><br>
+        <label for="expmonth">EXP Month:</label>
+        <select id="monthSelect">
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select><br><br>
 
-                </select><br><br>
-    
+        <label for="expyear">EXP Year:</label>
+        <select id="year" name="year">
+            <option value="2022">2023</option>
+            <option value="2023">2022</option>
+            <option value="2024">2021</option>
+            <option value="2025">2023</option>
+            <option value="2026">2022</option>
+            <option value="2027">2021</option>
+            <option value="2028">2023</option>
+            <option value="2029">2022</option>
+            <option value="2030">2021</option>
+        </select><br><br>
 
-            <input type="hidden" id="thankYouPage" name="thankYouPage" value="thank_you.html">
-            <input type="submit" value="Submit Booking">
-    
-            <br>
-                <a href="/index">Return Home</a>
-    </body>
-    
-    </html>
+        <label for="csv">CSV:</label>
+        <input type="text" id="csv" name="csv" required><br><br>
+
+        </select><br><br>
+
+
+        <input type="hidden" id="thankYouPage" name="thankYouPage" value="thank_you.html">
+        <input type="submit" value="Submit Booking">
+
+
+</body>
+
+</html>
