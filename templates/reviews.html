@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Sign Up</title>
-    <a>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@400&display=swap"
-            rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    </a>
+    <meta charset="UTF-8">
+    <title>Reviews</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@400&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 </head>
 
 <body>
@@ -55,49 +53,39 @@
                 </div>
             </div>
         </nav>
-
     </header>
+
     <div class="background-container"
-        style="background-image: url('static/images/london_skyline.png'); background-size: cover;">
-        <div class="signup-form" class="form-group">
-            {% if error %}
-            <p style="color: red;">Error: {{ error }}</p>
-            {% endif %}
-            <form method="post" action="{{ url_for('signup') }}">
-                <h2>Sign Up</h2>
-                <div class="form-group">
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
+        style="background-image: url('static/images/medway.jpeg'); background-size: cover;">
+        <form class="form-review" action="" method="POST">
+            <h2>Your Review</h2>
+            <div class="form-group-review">
+                <label for="author">Name</label>
+                <input type="text" class="form-control-review" id="author" name="author">
+            </div>
 
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+            <div class="form-group-review">
+                <label for="trip">What trip did you book?</label>
+                <input type="text" class="form-control-review" id="trip" name="trip">
+            </div>
 
-                <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
+            <div class="form-group-review">
+                <label for="date">When did you go?</label>
+                <input type="text" class="form-control-review" id="date" name="date">
+            </div>
 
-                <button type="submit">Sign Up</button>
-            </form>
-        </div>
-        </section>
-        <section>
-            <!-- <footer class="footer">
-            <p>&copy; Heli7 London Ltd </p>
-            <nav>
-                <a href="/index">Home</a>
-                <a href="/faq">Frequently Asked Questions</a>
-                <a href="/about_us">About Us</a>
-                <a href="/contact_us">Contact Us</a>
-                <a href="/gdpr">GDPR</a>
-            </nav> -->
+            <div class="form-group-review">
+                <label for="review">Tell us more!</label>
+                <input type="text" class="form-control form-control-custom" id="review" name="review">
+            </div>
 
-            </footer>
-        </section>
+            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+        </form>
+    </div>
 
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="path/to/bootstrap.min.js"></script>
 </body>
 
 </html>

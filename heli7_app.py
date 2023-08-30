@@ -57,6 +57,16 @@ def view_registration():
     return render_template("registration.html")
 
 
+@app.route('/reviews', methods=['GET'])
+def make_review():
+    return render_template("reviews.html")
+
+
+@app.route('/our_fleet')
+def our_fleet():
+    return render_template('our_fleet.html')
+
+
 app.config['SECRET_KEY'] = '0123456789'
 
 
@@ -227,9 +237,32 @@ def search():
     return render_template('no_results.html')
 
 
-@app.route('/our_fleet')
-def our_fleet():
-    return render_template('our_fleet.html')
+@app.route('/submit_review', methods=['POST'])
+def submit_review():
+    if request.method == 'POST':
+        # Use parentheses, not square brackets
+        review = request.form.get('review')
+        # Use parentheses, not square brackets
+        author = request.form.get('author')
+        # Use parentheses, not square brackets
+        date = request.form.get('date')
+        # Use parentheses, not square brackets
+        trip = request.form.get('trip')
+
+        # Add code here to insert the review data into the MySQL database
+        insert_query = "INSERT INTO reviews (review, author, date, trip) VALUES (%s, %s, %s, %s)"
+
+        data = (review, author, date, trip)
+
+        conn = connection()
+        cursor = conn.cursor()
+        cursor.execute(insert_query, data)
+        conn.commit()  # Commit the changes to the database
+        cursor.close()
+        conn.close()
+
+    # Redirect to the home page or wherever you want
+    return redirect(url_for('index'))
 
 
 if __name__ == "__main__":

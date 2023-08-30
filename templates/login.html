@@ -57,24 +57,26 @@
             </div>
         </nav>
     </header>
-    <h2>Login</h2>
-    <div class="login-container" class="form-group">
-        <p>{{MSG}}</p>
-        <form method="POST" action="{{ url_for('login') }}">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button class="btn btn-primary" role="button" type="submit">Login</button>
-            <p>Don't have an account? <a href="signup">Sign Up</a></p>
-        </form>
-    </div>
-    <section>
-        <!-- <footer class="footer">
+    <div class="background-container"
+        style="background-image: url('static/images/london_skyline.png'); background-size: cover;">
+        <div class="login-form" class="form-group">
+            <h2>Login</h2>
+            <p>{{MSG}}</p>
+            <form method="POST" action="{{ url_for('login') }}">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button class="btn btn-primary" role="button" type="submit">Login</button>
+                <p>Don't have an account? <a href="signup">Sign Up</a></p>
+            </form>
+        </div>
+        <section>
+            <!-- <footer class="footer">
             <p>&copy; Heli7 London Ltd </p>
             <nav>
                 <a href="/index">Home</a>
@@ -84,7 +86,7 @@
                 <a href="/gdpr">GDPR</a>
             </nav>
     </section> -->
-        <!-- </footer> -->
+            <!-- </footer> -->
 </body>
 
 </html>

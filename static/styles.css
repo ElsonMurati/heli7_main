@@ -34,7 +34,7 @@ body {
 .video-container {
     position: relative;
     width: 100%;
-    height: 87vh;
+    height: 88vh;
     overflow: hidden;
 }
 
@@ -175,6 +175,23 @@ video {
   /* Add a blue color to the author */
   .author {color: #007bff;}
   
+.author{
+    padding: 0.5%;
+}
+
+.form-review {
+    width: 400px;
+}
+.form-control-custom {
+    width: 800px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    font-size: 18px; /* You can also adjust the font size if necessary */
+}
+
+.form-group-review{
+    width: 100%;
+}
+
 .footer {
     text-align: center;
 }
@@ -232,21 +249,22 @@ input[type="submit"] {
 }
 
 /* Style for the form container */
-.signup-container {
+.signup-form {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(249, 249, 249, 0.274);
+    background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 1%;
+    padding: 0.5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.signup-container h1 {
+.signup-form h2 {
     font-size: 28px;
     text-align: center;
+    padding-bottom: 1.5%
 }
 
 .form-group {
@@ -278,21 +296,22 @@ button[type="submit"] {
     cursor: pointer;
     font-size: 20px;
 }
-.login-container {
+.login-form {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(249, 249, 249, 0.274);
+    background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 1%;
+    padding: 0.5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.login-container h1 {
+.login-form h2 {
     font-size: 28px;
     text-align: center;
+    padding-bottom: 1.5%;
 }
 
 .form-control-reg {
@@ -303,7 +322,7 @@ button[type="submit"] {
     background-size: cover;
     height: 100vh; /* Set the background container to full viewport height */
     display: flex;
-    justify-content: flex-start; /* Align content to the left */
+    justify-content: center; /* Align content to the left */
     align-items: center; /* Center vertically */
     padding-left: 0.5%;
     padding-top: 0.5%;
@@ -323,7 +342,12 @@ button[type="submit"] {
 
 .form-group-reg label,
 .form-control-reg {
-    font-size: 12px; /* Adjust the font size for smaller appearance */
+    font-size: 10px; /* Adjust the font size for smaller appearance */
+}
+.form-reg h2 {
+    font-size: 28px;
+    text-align: center;
+    padding-bottom: 1.5%;
 }
 
 .form-control-reg {
@@ -347,7 +371,77 @@ button[type="submit"] {
     background-color: #0056b3;
 }
 
+.about-section {
+    background-color: #f7f7f7;
+    padding: 1.5%;
+    text-align: center;
+}
 
+.about-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 1.5%;
+}
+
+.about-item {
+    max-width: 300px;
+    text-align: center;
+}
+
+.about-item img {
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.about-item:hover {
+    transform: scale(1.10); 
+    cursor: pointer;
+}
+
+.about-item h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.about-item p {
+    font-size: 0.9rem;
+}
+
+.text-section {
+    background-color: #ffffff; /* Background color of the box */
+    border: 1px solid #ddd; /* Border around the box */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 10px;
+    margin: 20px; /* Margin around the box to create spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle depth effect */
+}
+
+/* You can also style the text inside the box */
+.text-section p {
+    font-size: 16px; /* Font size of the text */
+    line-height: 1.5; /* Line height for better readability */
+    color: #333; /* Text color */
+     center;
+}
+
+.para1 {
+    text-align: justify;
+    background-color: #ffffff; /* Background color of the box */
+    border: 1px solid #ddd; /* Border around the box */
+    border-radius: 10px;
+    padding: 20px; /* Padding inside the box */
+    margin: 20px; /* Margin around the box to create spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle depth effect */
+}
+.about_h1 {
+    text-align: center;
+}
 
 /* Responsive styles */
 @media (max-width: 768px) {
