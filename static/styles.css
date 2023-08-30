@@ -5,7 +5,7 @@ html, body {
 }
 h1, h2, ul, li {
     margin: 0;
-    padding: 0;
+    padding-bottom: 1%;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif; 
 }
@@ -58,10 +58,44 @@ video {
     padding: 2.5%;
 }
 
+.full-width-image-container {
+    position: relative;
+    overflow: hidden; /* Hide overflowing text */
+    height: 100%; /* Ensure container takes up full height of column */
+}
+
+.image-with-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Make the image container take up full height */
+}
+
 .experience-img {
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    size: 75%;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+.image-text-overlay {
+    position: absolute;
+    top: 13%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; /* Text color */
+    background-color: rgba(0, 0, 0, 0.25); /* Text background color with transparency */
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 10px;
+}
+
+.image-text-overlay h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.image-text-overlay p {
+    margin: 0;
+    font-size: 16px;
 }
 
 .popular-section {

@@ -74,7 +74,7 @@
             </div>
         </section>
         <section>
-            <div class="our-experiences" class="container-fluid">
+            <div class="our-experiences container-fluid">
                 <div class="row">
                     <div class="col-lg-6">
                         <h2>Our Experiences</h2>
@@ -105,11 +105,18 @@
                         </p>
                     </div>
                     <div class="col-lg-6">
-                        <img src="{{ url_for('static', filename='images/carousel.jpg')}}" alt="Heli7 Logo"
-                            class="experience-img img-fluid">
+                        <div class="full-width-image-container">
+                            <div class="image-with-overlay">
+                                <img src="{{ url_for('static', filename='images/carousel.jpg')}}" alt="Heli7 Logo"
+                                    class="experience-img img-fluid">
+                                <div class="image-text-overlay">
+                                    <h3>Experience the Thrill</h3>
+                                    <p>Get a breathtaking view of London's iconic landmarks from the sky.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
         </section>
         <section class="popular-section">
             <h2>Popular Trips</h2>
