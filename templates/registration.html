@@ -4,17 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Registration Page</title>
-
-    <a>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@400&display=swap"
-            rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    </a>
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@400&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 </head>
 
 <body>
@@ -60,30 +55,66 @@
         </nav>
     </header>
 
-    <form action="" method="post">
-        Title<input type="text" name="Title">
-        <br>
-        First Name<input type="text" name="FirstName">
-        <br>
-        Last Name<input type="text" name="LastName">
-        <br>
-        Door Number<input type="text" name="DoorNumber">
-        <br>
-        Street Name<input type="text" name="StreetName">
-        <br>
-        City<input type="text" name="City">
-        <br>
-        Post Code<input type="text" name="PostCode">
-        <br>
-        Email<input type="text" name="Email">
-        <br>
-        Phone Number<input type="text" name="Phone">
-        <br>
-        Date of Birth<input type="text" name="DOB">
-        <br>
-        <input type="submit" name="submit">
-    </form>
+    <div class="background-container"
+        style="background-image: url('static/images/LondonCity.jpeg'); background-size: cover;">
+        <form class="form-reg" action="" method="post">
+            <div class="form-group-reg" class="table-responsive">
+                <label for="Title">Title</label>
+                <input type="text" class="form-control" id="Title" name="Title">
+            </div>
 
+            <div class="form-group-reg">
+                <label for="FirstName">First Name</label>
+                <input type="text" class="form-control-reg" id="FirstName" name="FirstName">
+            </div>
+
+            <div class="form-group-reg">
+                <label for="LastName">Last Name</label>
+                <input type="text" class="form-control-reg" id="LastName" name="LastName">
+            </div>
+
+            <div class="form-group-reg">
+                <label for="DoorNumber">Door Number</label>
+                <input type="text" class="form-control-reg" id="DoorNumber" name="DoorNumber">
+            </div>
+
+            <div class="form-group-reg">
+                <label for="StreetName">Street Name</label>
+                <input type="text" class="form-control-reg" id="StreetName" name="StreetName">
+            </div>
+
+            <div class="form-group-reg">
+                <label for="City">City</label>
+                <input type="text" class="form-control-reg" id="City" name="City">
+            </div>
+
+            <div class="form-group-reg">
+                <label for="PostCode">Post Code</label>
+                <input type="text" class="form-control-reg" id="PostCode" name="PostCode">
+            </div>
+
+            <div class="form-group-reg">
+                <label for="Email">Email</label>
+                <input type="text" class="form-control-reg" id="Email" name="Email">
+            </div>
+
+            <div class="form-group-reg">
+                <label for="Phone">Phone</label>
+                <input type="text" class="form-control-reg" id="Phone" name="Phone">
+            </div>
+
+            <div class="form-group-reg">
+                <label for="DOB">Date of Birth</label>
+                <input type="text" class="form-control-reg" id="DOB" name="DOB">
+            </div>
+
+            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+        </form>
+    </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="path/to/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -108,30 +108,30 @@
             </div>
     </section>
 
+    <div class="booking-container" class="form-group">
+        <form method="POST" action="/book">
 
-    <form method="POST" action="/book">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+            <label for="destination">Destination:</label>
+            <select id="destination" name="destination" required>
+                <option value="" disabled selected>Select a destination</option>
+                <option value="Paris">London City</option>
+                <option value="New York">Kent Heritage</option>
+                <option value="Tokyo">Thames and Medway</option>
+                <option value="Sydney">Royal Surrey</option>
+            </select><br><br>
 
-        <label for="destination">Destination:</label>
-        <select id="destination" name="destination" required>
-            <option value="" disabled selected>Select a destination</option>
-            <option value="Paris">London City</option>
-            <option value="New York">Kent Heritage</option>
-            <option value="Tokyo">Thames and Medway</option>
-            <option value="Sydney">Royal Surrey</option>
-        </select><br><br>
-
-        <label for="departure_date">Departure Date:</label>
-        <input type="date" id="departure_date" name="departure_date" required><br><br>
+            <label for="departure_date">Departure Date:</label>
+            <input type="date" id="departure_date" name="departure_date" required><br><br>
 
 
-        <input type="hidden" id="submit" name="submit" value="payment.html">
-        <input type="submit" value="Continue to Payment">
+            <input type="hidden" id="submit" name="submit" value="payment.html">
+            <input type="submit" value="Continue to Payment">
 
 </body>
 

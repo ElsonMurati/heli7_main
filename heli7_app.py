@@ -64,7 +64,7 @@ def connection():
     server = 'localhost'
     # adrians database
     # db = 'heli7_project'
-    db = 'heli7'
+    db = 'Heli7'
     # pattricks database
     uid = 'sky'
     pwd = 'P@$$word'
