@@ -4,7 +4,7 @@ html, body {
     padding: 0;
 }
 h1, h2, ul, li {
-    margin: 0;
+    margin: 2.5px;
     padding-bottom: 1%;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif; 
@@ -230,28 +230,28 @@ video {
     text-align: center;
 }
 
-.destination-photo {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    width: calc(50%); 
-    box-shadow: 2px 4px rgba(0, 0, 0, 0.1);
-    
-} 
+.destination_text {
+    text-align: center;
+    padding-top: ;
+    background-color: #f7f7f7d3;
+    border-radius: 15%;
+    padding: 2.5%;
+    border-style: groove;
+}
 
 /* Style the images */
 .destination-photo img {
     max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+    height: 30%;
+    border-radius: 15%;
+    padding: 5%;
 }
 
 form {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
