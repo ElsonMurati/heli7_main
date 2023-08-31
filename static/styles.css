@@ -384,10 +384,11 @@ button[type="submit"] {
 }
 .background-container {
     background-image: url('static/images/LondonCity.jpeg');
-    background-size: cover;
-    height: 100vh; /* Set the background container to full viewport height */
+    background-size: fill;
+    /* height: 100vh; Set the background container to full viewport height */
     display: flex;
     justify-content: center; 
+    padding: 1%;
     /* align-items: center; Center vertically */ */
     /* padding-left: 0.5%;
     padding-top: 0.5%;
@@ -408,12 +409,12 @@ button[type="submit"] {
 
 .form-group-reg label,
 .form-control-reg {
-    font-size: 10px; /* Adjust the font size for smaller appearance */
+    font-size: 12px; /* Adjust the font size for smaller appearance */
 }
 .form-reg h2 {
     font-size: 28px;
     text-align: center;
-    padding-bottom: 1.5%;
+    padding-bottom: 1%;
 }
 
 .form-control-reg {
