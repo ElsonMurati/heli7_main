@@ -72,6 +72,11 @@ def thx_rev():
     return render_template("thx_rev.html")
 
 
+@app.route('/privacy', methods=['GET'])
+def view_privacy():
+    return render_template("privacy.html")
+
+
 app.config['SECRET_KEY'] = '0123456789'
 
 
@@ -130,6 +135,11 @@ def login():
         else:
             return render_template('Login.html', MSG="Logging Failed")
     return render_template('Login.html', MSG="")
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 
 @app.route('/dashboard')

@@ -511,6 +511,10 @@ button[type="submit"] {
     width: 100%;
 }
 
+.thx.rev {
+    text-align: center;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
     .top-middle-nav ul {
