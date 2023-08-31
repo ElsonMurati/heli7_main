@@ -117,36 +117,61 @@
                 </div>
     </section>
 
-    <div class="container">
-        <div class="row">
-            <!-- <div class="col-md-6"> -->
-            <form class="form" action="/book" method="post">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required><br><br>
+    <!DOCTYPE html>
+    <html lang="en">
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required><br><br>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trip Booking</title>
+    </head>
 
-                    <label for="destination">Destination:</label>
-                    <select id="destination" name="destination" required>
-                        <option value="" disabled selected>Select a destination</option>
-                        <option value="London">London City</option>
-                        <option value="Kent">Kent Heritage</option>
-                        <option value="Medway">Thames and Medway</option>
-                        <option value="Surrey">Royal Surrey</option>
-                    </select><br><br>
+    <!DOCTYPE html>
+    <html lang="en">
 
-                    <label for="departure_date">Departure Date:</label>
-                    <input type="date" id="departure_date" name="departure_date" required><br><br>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trip Booking</title>
+    </head>
 
-                    <input type="hidden" id="submit" name="submit" value="payment.html">
-                    <input type="submit" value="Continue to Payment">
-                </div>
-            </form>
+    <body>
+        <div class="container">
+            <div class="row">
+                <form class="form" action="" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required><br><br>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br><br>
+
+                        <label for="destination">Destination:</label>
+                        <select id="destination" name="destination" required>
+                            <option value="" disabled selected>Select a destination</option>
+                            <option value="London">London City, £880</option>
+                            <option value="Kent">Kent Heritage, £580</option>
+                            <option value="Medway">Thames and Medway, £1050</option>
+                            <option value="Surrey">Royal Surrey, £580</option>
+                        </select><br><br>
+
+                        <label for="departure_date">Departure Date:</label>
+                        <input type="date" id="departure_date" name="departure_date" required><br><br>
+
+                        <label for="num_people">Number of People:</label>
+                        <input type="number" id="num_people" name="num_people" required><br><br>
+
+                        <div>
+                            <input type="submit" value="Proceed to payment">
+                        </div>
+
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
-    </div>
+    </body>
+
+    </html>
 
     <br>
     <section>
@@ -166,6 +191,7 @@
         </footer>
     </section>
 
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 
 </html>
