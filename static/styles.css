@@ -387,17 +387,18 @@ button[type="submit"] {
     background-size: cover;
     height: 100vh; /* Set the background container to full viewport height */
     display: flex;
-    justify-content: center; /* Align content to the left */
-    align-items: center; /* Center vertically */
-    padding-left: 0.5%;
+    justify-content: center; 
+    /* align-items: center; Center vertically */ */
+    /* padding-left: 0.5%;
     padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    padding-bottom: 0.5%; */
      /* Add left padding to space the form from the left edge */
     }
 
 .form-reg {
     width: 50%; /* Set the form width to 50% of its container (background-container) */
-    background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.856); /* Add a semi-transparent white background */
+    padding: 1%;
 }
 
 /* Style for form elements */
