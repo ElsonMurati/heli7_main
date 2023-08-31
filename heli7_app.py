@@ -67,6 +67,11 @@ def our_fleet():
     return render_template('our_fleet.html')
 
 
+@app.route('/thx_rev', methods=['GET'])
+def thx_rev():
+    return render_template("thx_rev.html")
+
+
 app.config['SECRET_KEY'] = '0123456789'
 
 
@@ -104,11 +109,6 @@ def add_customer():
             "insert into customers(Title, FirstName, LastName, DoorNumber, StreetName, City, PostCode, email, phone, DOB) values ('" + title + "','" + firstname + "','" + lastname + "','" + doornumber + "','" + streetname + "','" + city + "','" + postcode + "','" + phone + "','" + email + "','" + dob + "')")
         return render_template('reg_confirm.html')
     return render_template("registration.html")
-
-
-@app.route('/')
-def index():
-    return render_template('index.html')
 
 
 @app.route('/login', methods=['POST', 'GET'])
@@ -237,7 +237,7 @@ def search():
     return render_template('no_results.html')
 
 
-@app.route('/submit_review', methods=['POST'])
+@app.route('/reviews', methods=['POST'])
 def submit_review():
     if request.method == 'POST':
         # Use parentheses, not square brackets
@@ -262,7 +262,7 @@ def submit_review():
         conn.close()
 
     # Redirect to the home page or wherever you want
-    return redirect(url_for('index'))
+    return redirect(url_for('thx_rev'))
 
 
 if __name__ == "__main__":

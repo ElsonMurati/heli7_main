@@ -49,46 +49,112 @@
               <a class="nav-link" href="/contact_us">Contact Us</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+          <form class="d-flex searc-form" role="search" method="GET" action="/search">
+            <input class="form-control me-2 search-input" type="search" placeholder="Search" aria-label="Search"
+              name="query">
+            <button class="btn btn-outline-success search-button" type="submit">Search</button>
           </form>
         </div>
       </div>
     </nav>
   </header>
-
+  <h1>Our Fleet</h1>
   <section>
-    <h1>Our Fleet</h1>
 
-
-    <div class="container_booking">
-      <div class="row row-cols-4">
- 
-        <div class="destination-photo">
-
-           <a> <img src="{{url_for('static', filename='images/Twin-Squirrel.jpg')}}" alt="Twin-Squirrel" /></a>
-          <p>The Twin-Squirrel</p>
-          <p>Whether it be VIP or corporate travel, or a dedicated sightseeing journey, the Aerospatiale AS350
-           Single Squirrel caters to all requirements.
-          </p>
-
-          <p>This spacious and comfortable aircraft offers excellent rear seat visibility, and is one of the largest
-        single engine turbine helicopters available. </p>
-        </div>
-
-        <div class="destination-photo">
-
-          <a> <img src="{{url_for('static', filename='images/Robinson66.jpg')}}" alt="Robinson" /></a>
-          <p>The Robinson R44</p>
-          <p>The Robinson R44 is a four-seat light helicopter which has been in production since 1993. It features 
-            an enclosed cabin with two rows of side-by-side seating for a pilot and three passengers, a semi-rigid 
-            two-bladed main rotor and a two-bladed tail rotor and a skid landing gear.
-          </p>
-
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
       </div>
-    </section>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="static/images/h145.jpeg" class="d-block w-100" alt="Helecopter">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Airbus H145</h5>
+            <p>The H145’s compact footprint, unobstructed cabin and flat floor from nose to tail lend themselves to a
+              full range of applications, accommodating up to 10 passengers this helicopter is a must have for big
+              groups.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="static/images/Twin-Squirrel.jpg" class="d-block w-100" alt="helicopter">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Twin-Squirrel</h5>
+            <p>Whether it be VIP or corporate travel, or a dedicated sightseeing journey, the Aerospatiale AS350
+              Single Squirrel caters to all requirements.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="static/images/Rob66.jpeg" class="d-block w-100" alt="helicopter">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Robinson66</h5>
+            <p>The Robinson R44 is a four-seat light helicopter which has been in production since 1993. It features
+              an enclosed cabin with two rows of side-by-side seating for a pilot and three passengers, a semi-rigid
+              two-bladed main rotor and a two-bladed tail rotor and a skid landing gear.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
+
+  </section>
+
+  <footer>
+    <div class="footer">
+      <img src="{{ url_for('static', filename='images/logo-black-no-background.png')}}" alt="Hei7 Logo">
+      <h3>&copy; Heli7 London Ltd </h3>
+
+      <nav>
+        <a href="/index">Home</a>
+        <a href="/faq">Frequently Asked Questions</a>
+        <a href="/about_us">About Us</a>
+        <a href="/contact_us">Contact Us</a>
+        <a href="/gdpr">GDPR</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 
 </html>
+
+
+<!-- <div class="container_booking">
+  <div class="row row-cols-4">
+
+    <div class="destination-photo">
+
+      <a> <img src="{{url_for('static', filename='images/Twin-Squirrel.jpg')}}" alt="Twin-Squirrel" /></a>
+      <p>The Twin-Squirrel</p>
+      <p>Whether it be VIP or corporate travel, or a dedicated sightseeing journey, the Aerospatiale AS350
+        Single Squirrel caters to all requirements.
+      </p>
+
+      <p>This spacious and comfortable aircraft offers excellent rear seat visibility, and is one of the largest
+        single engine turbine helicopters available. </p>
+    </div>
+
+    <div class="destination-photo">
+
+      <a> <img src="{{url_for('static', filename='images/Robinson66.jpg')}}" alt="Robinson" /></a>
+      <p>The Robinson R44</p>
+      <p>The Robinson R44 is a four-seat light helicopter which has been in production since 1993. It features
+        an enclosed cabin with two rows of side-by-side seating for a pilot and three passengers, a semi-rigid
+        two-bladed main rotor and a two-bladed tail rotor and a skid landing gear.
+      </p>
+
+    </div> -->

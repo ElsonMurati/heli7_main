@@ -31,10 +31,27 @@ body {
     flex-direction: column;
 }
 
+search.form {
+    max-width: 250px;
+    max-height: 50px;
+
+}
+
+.search-input {
+    max-width: 150px;
+    max-height: 50px
+
+}
+
+.search-button {
+    padding: 5px 10px;
+    max-height: 50px;
+    text-align: justify;
+}
 .video-container {
     position: relative;
     width: 100%;
-    height: 88vh;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -55,7 +72,7 @@ video {
 }
 
 .our-experiences {
-    padding: 2.5%;
+    padding: 1%;
 }
 
 .full-width-image-container {
@@ -73,13 +90,14 @@ video {
 .experience-img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    object-fit: cover; 
+    border-radius: 15px;
 }
 
 .image-text-overlay {
     position: absolute;
-    top: 13%;
-    left: 35%;
+    top: 30%;
+    left: 32%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff; /* Text color */
@@ -147,7 +165,7 @@ video {
   
   .mySlides {
     display: none;
-    padding: 80px;
+    padding: 35px;
     text-align: center;
   }
   
@@ -180,9 +198,9 @@ video {
   }
   
   .dot-container {
-    position: relative;
+    position: 50%;
     text-align: center;
-    padding: 10px 0; /* Adjust the padding */
+    padding-bottom: 2%; /* Adjust the padding */
     background: transparent;
   }
   
@@ -228,15 +246,25 @@ video {
 
 .footer {
     text-align: center;
+    background-color: #f7f7f7;
 }
+
+.footer img {
+width: 10%;
+height: 10%;
+}
+
+.footer h3 {
+    font-size: 0.9rem;
+}
+
 
 .destination_text {
     text-align: center;
     padding-top: ;
-    background-color: #f7f7f7d3;
-    border-radius: 15%;
-    padding: 2.5%;
-    border-style: groove;
+    background-color: #ffffff;
+    padding: 5%;
+    
 }
 
 /* Style the images */
@@ -247,11 +275,14 @@ video {
     padding: 5%;
 }
 
+
 form {
+    position: relative;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 15px;
+    padding-bottom: 1%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -475,6 +506,9 @@ button[type="submit"] {
 }
 .about_h1 {
     text-align: center;
+}
+.carousel > .carousel-inner > .carousel-item > a > img {
+    width: 100%;
 }
 
 /* Responsive styles */

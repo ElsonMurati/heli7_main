@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Sign Up</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
     <a>
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@400&display=swap"
@@ -57,14 +59,12 @@
             </div>
         </nav>
     </header>
-    <div>
-        <h1>Search Results for "{{ query }}"</h1>
-        <ul>
-            {% for result in results %}
-            <li>{{ result }}</li>
-            {% endfor %}
-        </ul>
-    </div>
+
+    <div class="background-container"
+        style="background-image: url('static/images/thanks.webp'); background-size: cover;">
+        <h1>Your review has been sucessfully submitted</h1>
+        <p>We appriciate your feedback</p>
+
 </body>
 
 </html>
